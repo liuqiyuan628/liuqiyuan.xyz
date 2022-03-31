@@ -352,7 +352,8 @@ svg {
   margin: auto 0;
   position: relative;
   /* top: 22%; */
-  font-size: 30px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .contact__container {
