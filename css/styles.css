@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+}
+
+body {
+  height: 120vh;
+  font-family: "Roboto Mono", monospace;
+  background-color: #f0ffff;
+  color: #191970;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 30px 0;
+  background-color: #fdfffc;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation__link {
+  display: flex;
+  position: absolute;
+  right: 70px;
+}
+.navigation__link > div {
+  margin-left: 30px;
+}
+
+.navigation__link > div a {
+  position: relative;
+}
+.navigation__link > div a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: rgb(0, 0, 0);
+  /* here to change the underline color */
+  height: 1px;
+}
+.navigation__link > div a:hover::after {
+  width: 100%;
+}
+
+.navigation__link > div a {
+  transition: all 1s;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  font-size: 1.1em;
+}
+
+.navigation__link > div a::after {
+  text-align: left;
+  content: ".";
+  margin: 0;
+  opacity: 0;
+}
+.navigation__link > div a:hover {
+  color: #fff;
+  z-index: 1;
+}
+.navigation__link > div a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+.navigation__link > div a:hover {
+  color: #000080;
+  /* here to change the hovered font color */
+}
+
+.navigation__link > div a:after,
+.navigation__link > div a:before {
+  transition: all 0.5s;
+}
+
+.navigation__logo {
+  display: flex;
+  position: absolute;
+  left: 70px;
+}
+
+.navigation__logoImg {
+  max-width: 100px;
+}
+
+.banner {
+  color: #f0ffff;
+  margin-top: 50px;
+  padding: 80px 50px;
+  background-color: #3a0ca3;
+  box-shadow: 40px 40px #00ff7f !important;
+  transform: translate(4px, -4px) !important;
+}
+
+.banner:hover {
+  transform: translate(10px, 10px) !important;
+  box-shadow: none !important;
+  transition: ease-in-out 0.3s !important;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* animation */
+.animation {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+/* Fade in */
+.animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130%;
+  height: 13px;
+  background-color: #00ff7f;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Slide in */
+.animation {
+  overflow: hidden;
+}
+
+.animation::after {
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+.animation:hover::after,
+.animation:focus::after {
+  transform: translate3d(-45%, 0, 0);
+}
+
+/* animation end */
+h2 {
+  font-size: 5em;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+}
+
+.banner > div {
+  margin-bottom: 1.5em;
+}
+
+.banner__introduction > h3 {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 2em;
+}
+
+.banner__name {
+  font-size: 20px;
+  text-transform: capitalize;
+  word-spacing: 7px;
+}
+
+/* projects style */
+.projects__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 70px;
+  padding-top: 100px;
+}
+
+.projects__2 {
+  border: #3a0ca3 2px solid !important;
+  background-color: #00ff7f;
+  box-shadow: 12px 12px #000080 !important;
+  transform: translate(4px, -4px) !important;
+}
+
+.projects {
+  border: #3a0ca3 2px solid;
+  border-radius: 5px;
+  padding: 50px 50px;
+  flex: 1 1 400px;
+  display: flex;
+}
+
+.projects small {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.projects small::before {
+  content: " ";
+  display: block;
+  padding-top: 30px;
+}
+.projects__2:hover {
+  background-color: #f0ffff !important;
+  transform: translate(0, 0) !important;
+  border: #3a0ca3 2px solid !important;
+  box-shadow: none !important;
+  transition: ease-in-out 0.3s !important;
+}
+
+.projects:hover {
+  background-color: #00ff7f;
+  border-radius: 5px;
+  transform: translate(4px, -4px);
+  box-shadow: 12px 12px #000080;
+  border: black 2px solid;
+  border-radius: 5px;
+  transition: ease-in-out 0.3s;
+}
+
+.projects a {
+  text-decoration: none;
+}
+
+.projects__h2,
+.skills__h2,
+.contact__h2 {
+  text-transform: uppercase;
+}
+.projects h3 {
+  font-size: 26px;
+  padding-bottom: 10px;
+  padding-top: 0;
+  position: relative;
+  top: -40px;
+}
+
+.projects__h2 {
+  margin-bottom: 2em;
+}
+
+.projects:hover .projects__textSpan {
+  visibility: visible;
+  opacity: 1;
+}
+
+.projects > div {
+  max-width: 300px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 17px;
+  margin-top: 10px;
+}
+
+/* skills style */
+svg {
+  font-size: 70px;
+}
+.skills__iconContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 100px 0;
+}
+
+.skills__iconContainer > div {
+  text-align: center;
+  margin-top: 50px;
+  width: 130px;
+}
+
+/* .skills__iconContainer > div > div {
+  margin-top: 15px;
+  font-size: 15px;
+} */
+
+.scrollWrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 1.3em;
+  font-weight: 800;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  margin: 50px 0;
+}
+
+.scrollText span:hover {
+  -webkit-text-stroke: 3px #191970;
+  color: transparent;
+}
+
+.scrollText {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: scroll 90s linear infinite;
+  text-transform: uppercase;
+}
+
+.scrollText span {
+  color: #191970;
+  font-size: 80px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* contact style */
+.contact {
+  display: flex;
+  align-items: center;
+}
+.contact div a svg {
+  font-size: 35px;
+  color: #000080;
+  margin-left: 20px;
+}
+
+.contact__h2 {
+  display: flex;
+  margin: auto 0;
+  position: relative;
+  /* top: 22%; */
+  font-size: 30px;
+}
+
+.contact__container {
+  display: flex;
+  margin: 0 auto;
+  align-self: center;
+  justify-content: flex-end;
+  font-size: 0.5em;
+  max-width: 1200px;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.projects-section,
+.skills-section {
+  padding: 150px 0;
+}
+
+.skills-section {
+  padding-top: 0;
+}
+
+footer {
+  padding: 5px 0;
+  background-color: #00ff7f;
+}
