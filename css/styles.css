@@ -273,7 +273,7 @@ main {
   margin-top: 10px;
 }
 .projects__text {
-  font-size: clamp(0.8em, 3vw, 1.3em);
+  font-size: clamp(1em, 3vw, 1.3em);
 }
 /* skills style */
 svg {
