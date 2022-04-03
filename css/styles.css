@@ -37,6 +37,7 @@ header {
 
 .navigation__link > div a {
   position: relative;
+  margin-right: 2em;
 }
 .navigation__link > div a::after {
   position: absolute;
@@ -58,9 +59,9 @@ header {
 .navigation__link > div a {
   transition: all 1s;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   color: #000;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .navigation__link > div a::after {
