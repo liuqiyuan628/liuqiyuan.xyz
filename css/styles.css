@@ -89,9 +89,9 @@ header {
 }
 
 .navigation__logo {
-  display: flex;
+  display: inline-block;
   position: absolute;
-  left: 70px;
+  left: 4%;
 }
 
 .navigation__logoImg {
