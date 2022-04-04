@@ -118,7 +118,7 @@ header {
 }
 
 h2 {
-  font-size: clamp(1.6em, 6vw, 5em);
+  font-size: clamp(1.8em, 9.5vw, 5em);
   text-transform: capitalize;
   margin-bottom: 1em;
 }
@@ -129,7 +129,7 @@ h2 {
 
 .banner__introduction > h3 {
   font-weight: 300;
-  font-size: clamp(0.8em, 2vw, 1.5em);
+  font-size: clamp(1em, 2vw, 1.5em);
   line-height: 2em;
 }
 
@@ -274,7 +274,7 @@ main {
 }
 
 .projects__textSpan {
-  font-size: clamp(0.8em, 3vw, 1.1em);
+  font-size: clamp(0.9em, 2vw, 1.1em);
 }
 /* skills style */
 svg {
@@ -420,7 +420,7 @@ footer {
     padding-bottom: 1em;
   }
   main {
-    padding: 0 1.8em;
+    padding: 0 1em;
   }
   .skills__iconContainer {
     display: flex;
@@ -446,10 +446,9 @@ footer {
     margin-top: 3rem;
     padding: 2rem 2rem;
     background-color: #3a0ca3;
-    box-shadow: 0.7rem 0.7rem #00ff7f !important;
+    box-shadow: 0.5rem 0.5rem #00ff7f !important;
     transform: translate(2px, -2px) !important;
     transition: box-shadow ease-in-out 0.3s !important;
-    left: -50px;
   }
 
   .banner:hover {
@@ -463,5 +462,12 @@ footer {
 
   .banner > div {
     margin-bottom: 1.5em;
+  }
+
+  .projects__2 {
+    border: #3a0ca3 2px solid !important;
+    background-color: #00ff7f;
+    box-shadow: 0.4em 0.4em #000080 !important;
+    transform: translate(2px, -2px) !important;
   }
 }
